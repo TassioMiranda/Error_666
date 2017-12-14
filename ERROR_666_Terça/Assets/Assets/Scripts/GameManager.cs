@@ -15,19 +15,15 @@ public class GameManager : MonoBehaviour {
 
 	void Awake ()
 	{
-		#region
 		DontDestroyOnLoad (_Instance);
 
-		if (_Instance == null) 
-		{
+		if (_Instance == null) {
 			_Instance = this;
 		}
 
-		if (_Instance == this)
-		{
+		if (_Instance == this){
 			Destroy (_Instance);
 		}
-		#endregion
 
 		_pausegame = false;
 	}
@@ -38,15 +34,17 @@ public class GameManager : MonoBehaviour {
 		{
 		case _gameStates.Menu:
 
-			if(Input.GetKeyDown(KeyCode.Mouse0))
-			{
-				
+			if(Input.GetKeyDown(KeyCode.Mouse0)){
+				SceneManager.LoadScene ();
+				_gameStates = _gameStates.Playing;
 			}
 
 			break;
 		case _gameStates.Playing:
+			
 			break;
 		case _gameStates.Pause:
+			
 			break;
 		case _gameStates.Reset:
 			break;
