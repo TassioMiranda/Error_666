@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -32,9 +34,15 @@ public class GameManager : MonoBehaviour {
 
 	void Update () 
 	{
-		switch(_gameStates)
+		switch(gameState)
 		{
 		case _gameStates.Menu:
+
+			if(Input.GetKeyDown(KeyCode.Mouse0))
+			{
+				
+			}
+
 			break;
 		case _gameStates.Playing:
 			break;

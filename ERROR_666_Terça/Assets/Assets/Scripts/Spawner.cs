@@ -7,7 +7,7 @@ public class Spawner : MonoBehaviour {
 	private float posicaoX;
 	private float posicaoY;
 
-	[SerializeField] Gameobject _tesouraPrefab;
+	[SerializeField] GameObject _tesouraPrefab;
 	private GameManager _gameManager;
 	[SerializeField] float _Frequencia;
 	private float frequencia;
@@ -17,7 +17,7 @@ public class Spawner : MonoBehaviour {
 	{
 		_gameManager = FindObjectOfType (typeof(GameManager)) as GameManager;
 
-		_Frequencia = 
+		_Frequencia = Time.deltaTime;
 	}
 
 	void Update () 
